@@ -1,38 +1,12 @@
-import { Layout, Menu, MenuProps } from "antd";
-import { NavLink, Outlet } from "react-router-dom";
+import { Layout, Menu } from "antd";
+import { Outlet } from "react-router-dom";
+import { adminSidebarItems } from "../../router/router.admin";
 // import React from 'react';
 // import { UploadOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
 const { Header, Content, Footer, Sider } = Layout;
 
 function MainLayout() {
-  const items: MenuProps["items"] = [
-    {
-      key: 4,
-      label: <NavLink to={"/admin/dashboard"}>Dashboard</NavLink>,
-    },
-    {
-      key: 2,
-      label: "Profile",
-    },
-    {
-      key: 3,
-      label: "User management",
-      children: [
-        {
-          key: 5,
-          label: <NavLink to={"/admin/createAdmin"}>Create Admin</NavLink>,
-        },
-        {
-          key: 6,
-          label: <NavLink to={"/admin/createFaculty"}>Create Faculty</NavLink>,
-        },
-        {
-          key: 7,
-          label: <NavLink to={"/admin/createStudent"}>Create Student</NavLink>,
-        },
-      ],
-    },
-  ];
+ 
   return (
     <div>
       <Layout style={{ height: "100vh" }}>
@@ -61,7 +35,7 @@ function MainLayout() {
             theme="dark"
             mode="inline"
             defaultSelectedKeys={["4"]}
-            items={items}
+            items={adminSidebarItems}
           />
         </Sider>
         <Layout>
