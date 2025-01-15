@@ -1,7 +1,7 @@
 function CreateFaculty() {
   return (
     <div>
-      <h2>Create Faculty page</h2>
+      <h2>This is faculty route</h2>
     </div>
   );
 }
